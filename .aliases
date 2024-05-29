@@ -1,0 +1,31 @@
+# NAVIGATION
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# LIST
+alias l="ls -alt"
+
+# NVIM
+alias vim="nvim"
+
+# INTERACTIVE COPY
+alias cp="cp -i"
+
+# GIT
+alias gs="git status"
+alias gd="git diff"
+alias gc="git commit"
+alias gr="git gr"
+alias gb="git branch -a"
+
+# MVN
+alias mvncpst="mvn clean package -DskipTests=true"
+
+# APPS
+alias te="open -a TextEdit"
+alias vsc="open -a \"Visual Studio Code.app\""
+
+# EDOK LOGS
+alias edok-log="open ~/Documents/GitZabka/eDok2_0-API/logs/edok-rest-logback.log"
