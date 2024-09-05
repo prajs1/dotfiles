@@ -11,7 +11,7 @@ alias l="ls -alt --color"
 alias vim="nvim"
 
 # INTERACTIVE COPY
-alias cp="cp -i"
+alias cp="cp -iv"
 
 # GIT
 alias gs="git status"

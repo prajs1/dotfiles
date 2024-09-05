@@ -1,4 +1,4 @@
-plugins
+#Set the directory to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 #Download Zinit if it's notyet downloaded
@@ -81,6 +81,8 @@ bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+#Aliases
+source ~/.aliases
 
 #Shell integrations
 eval "$(fzf  --zsh)"
