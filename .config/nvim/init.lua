@@ -18,6 +18,8 @@ vim.opt.rtp:prepend(lazypath)
 require("config.vim-options")
 -- Load keymaps for Vim from config/vim-keymaps.lua
 require("config.vim-keymaps")
+-- Load the auto commands from config/autocmds.lua
+require("config.autocmds")
 -- Setup Lazy, this always should be last
 -- Tell Lazy that all plugins specs are located in plugins directory
 -- We can also specify lazy options by creating and adding local variable called opts and adding it after comma in setup
