@@ -110,6 +110,10 @@ local function setup_jdtls()
     }
   }
 
+  local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+  for k,v in pairs(lsp_capabilities) do capabilities[k] = v end
+
   -- Get the default extended client capabilities of the JDTLS language server
   local extendedClientCapabilities = jdtls.extendedClientCapabilities
   -- Modify one property called resolveAdditionalTextEditsSupport and set it to true
@@ -249,7 +253,8 @@ local function setup_jdtls()
     require("jdtls.dap").setup_dap()
 
     -- Find the main method(s) of the application so the debug adapter can successfully start up the application
-    -- Sometimes this will randomly fail if language server takes to long to startup for the project, if a ClassDefNotFoundException occurs when running
+    -- Sometimes this will randomly fail if language server takes to long to startup for the project, 
+    -- if a ClassDefNotFoundException occurs when running
     -- the debug tool, attempt to run the debug tool while in the main class of the application, or restart the neovim instance
     -- Unfortunately I have not found an elegant way to ensure this works 100%
     require("jdtls.dap").setup_dap_main_class_configs()
