@@ -58,9 +58,9 @@ local function java_keymaps()
   -- Allow yourself/register to run JdtUpdateConfig as a Vim command
   vim.cmd("command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()")
   -- Allow yourself/register to run JdtBytecode as a Vim command
-  vim.cmd("commad! -buffer JdtBytecode lua require('jdtls').javap()")
+  vim.cmd("command! -buffer JdtBytecode lua require('jdtls').javap()")
   -- Allow yourself/register to run JdtJshell as a Vim command
-  vim.cmd("commad! -buffer JdtJshell lua require('jdtls').jshell()")
+  vim.cmd("command! -buffer JdtJshell lua require('jdtls').jshell()")
 
   -- Set a Vim motion to <Space> + <Shift>J + o to organize imports in normal mode
   vim.keymap.set("n", "<leader>Jo", "<Cmd> lua require('jdtls').organize_imports()<CR>", { desc = "[J]ava [O]rganize Imports" })
@@ -259,7 +259,7 @@ local function setup_jdtls()
     -- Unfortunately I have not found an elegant way to ensure this works 100%
     require("jdtls.dap").setup_dap_main_class_configs()
     -- Enable jdtls commands to be used in Neovim
-    require("jdtls_setup").add_commands()
+    require("jdtls.setup").add_commands()
     -- Refresh the codelens
     -- Code lens enables features such as code reference counts, implementations counts, and more
     vim.lsp.codelens.refresh()
