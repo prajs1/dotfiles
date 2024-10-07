@@ -3,29 +3,38 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "eslint" }
+        -- Install these LSP's automatically
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "jdtls" },
       })
-    end
+    end,
+  },
+  -- JAVA LSP
+  {
+    -- https://github.com/mfussenegger/nvim-jdtls
+    "mfussenegger/nvim-jdtls",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
+      lspconfig.ts_ls.setup({
+        capabilities = capabilities,
       })
-      
+
       lspconfig.eslint.setup({
         capabilities = capabilities,
       })
@@ -37,6 +46,6 @@ return {
       vim.keymap.set("n", "<leader>cr", require("telescope.builtin").lsp_references, { desc = "[C]ode Goto [R]eferences" })
       vim.keymap.set("n", "<leader>cR", vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
       vim.keymap.set("n", "<leader>cD", vim.lsp.buf.declaration, { desc = "[C]ode Goto [D]eclaration" })
-    end
-  }
+    end,
+  },
 }
