@@ -1,5 +1,5 @@
 # BEGIN_KITTY_THEME
-# Paul Millr
+# Jet Brains Darcula
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -37,5 +37,5 @@ cursor_shape block
 
 #Color and style of URL uinder mouse
 #possible styles: none, curly, straight, double, dotted, dashed
-# url_color #0078bd
+url_color #0078bd
 url_style curly
