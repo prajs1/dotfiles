@@ -58,7 +58,7 @@ setopt beep
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Oh My Posh
-export PATH=$PATH:/home/r/.local/bin
+export PATH=$PATH:/home/$(whoami)/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/my.toml)"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
