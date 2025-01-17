@@ -78,4 +78,4 @@ bindkey '^n' history-search-forward
 source ~/.aliases
 
 #Shell integrations
-eval "$(fzf  --zsh)"
+eval "$(fzf --zsh)"

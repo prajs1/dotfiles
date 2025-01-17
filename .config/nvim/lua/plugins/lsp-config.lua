@@ -10,7 +10,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         -- Install these LSP's automatically
-        ensure_installed = { "lua_ls", "ts_ls", "eslint", "jdtls" },
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "angularls", "jdtls" },
       })
     end,
   },
@@ -37,6 +37,10 @@ return {
       })
 
       lspconfig.eslint.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.angularls.setup({
         capabilities = capabilities,
       })
 

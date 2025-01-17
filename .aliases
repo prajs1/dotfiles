@@ -24,8 +24,9 @@ alias gb="git branch -a"
 alias mvncpst="mvn clean package -DskipTests=true"
 
 # APPS
-alias te="open -a TextEdit"
-alias vsc="open -a \"Visual Studio Code.app\""
+alias open="xdg-open"
+# alias te="open -a TextEdit"
+# alias vsc="open -a \"Visual Studio Code.app\""
 
 # EDOK LOGS
 alias edok-log="open ~/Documents/GitZabka/eDok2_0-API/logs/edok-rest-logback.log"
