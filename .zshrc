@@ -31,7 +31,7 @@ zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s, %l
 zstyle ':completion:*' use-compctl true
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/r/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -53,7 +53,7 @@ setopt beep
 
 #Completion styling
 #For completion to igonore case sensitinve
-#zstyle ':compeletion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':compeletion:*' matcher-list 'm:{a-z}={A-Za-z}'
 #Enable directory preview on completions
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
@@ -69,6 +69,8 @@ export NVM_DIR="$HOME/.nvm"
 
 
 #Keybindings
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 bindkey -v
 bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
@@ -77,7 +79,7 @@ bindkey '^n' history-search-forward
 #Aliases
 source ~/.aliases
 
-export PATH="$PATH:/home/prajsro@ad.zabka.pl/.dotnet/tools"
+export PATH="$PATH:/home/$(whoami)/.dotnet/tools"
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 export SHELL=/bin/zsh
 
