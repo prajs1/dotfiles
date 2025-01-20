@@ -79,7 +79,7 @@ bindkey '^n' history-search-forward
 #Aliases
 source ~/.aliases
 
-export PATH="$PATH:/home/prajsro@ad.zabka.pl/.dotnet/tools"
+export PATH="$PATH:/home/$(whoami)/.dotnet/tools"
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 export SHELL=/bin/zsh
 
