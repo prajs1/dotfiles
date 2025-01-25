@@ -2,7 +2,8 @@ return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
-    "nvim-neotest/nvim-nio"
+    "nvim-neotest/nvim-nio",
+    "mfussenegger/nvim-dap-python",
 	},
 	config = function()
 		local dap = require("dap")
@@ -27,6 +28,8 @@ return {
 		dap.listeners.before.event_exited.dapui_config = function()
 			dapui.close()
 		end
+
+    require('dap-python').setup()
 
     -- Set a Vim motion to <Space> + d + t to toggle a breakpoint at the line where the cursor is currently on
 		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, { desc = "[D]ebug [T]oggle Breakpoint" })
