@@ -33,3 +33,6 @@ vim.opt.hlsearch = true -- highlight all mathces in search
 vim.opt.ignorecase = true -- ignore casesensitive in search
 vim.opt.smartcase = true -- match casesensitive if explicitly stated
 
+-- GUI Colors
+vim.opt.termguicolors = true -- Enable terminal GUI colors
+
