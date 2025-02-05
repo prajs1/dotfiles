@@ -5,10 +5,16 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # LIST
-alias l="ls -alt --color"
+alias l="ls -alth --color"
+alias l10="ls -alth --color | head -10"
+alias l20="ls -alth --color | head -20"
 
 # NVIM
 alias vim="nvim"
+
+# TMUX
+alias ta="tmux attach"
+alias td="tmux detach"
 
 # INTERACTIVE COPY
 alias cp="cp -iv"
@@ -16,6 +22,7 @@ alias cp="cp -iv"
 # GIT
 alias gs="git status"
 alias gd="git diff |bat"
+alias gds="git diff --staged |bat"
 alias gc="git commit"
 alias gr="git gr"
 alias gb="git branch -a"
@@ -24,9 +31,5 @@ alias gb="git branch -a"
 alias mvncpst="mvn clean package -DskipTests=true"
 
 # APPS
-alias open="xdg-open"
-# alias te="open -a TextEdit"
-# alias vsc="open -a \"Visual Studio Code.app\""
-
-# EDOK LOGS
-alias edok-log="open ~/Documents/GitZabka/eDok2_0-API/logs/edok-rest-logback.log"
+alias te="open -a TextEdit"
+alias vsc="open -a \"Visual Studio Code.app\""

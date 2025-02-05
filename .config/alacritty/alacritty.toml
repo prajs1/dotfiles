@@ -7,13 +7,13 @@ padding.y = 10
 
 decorations = "Buttonless"
 
-opacity = 0.85
+opacity = 0.95
 
 blur = true
 
 option_as_alt = "Both"
 
 [font]
-normal.family = "JetBrainsMonoNL Nerd Font Mono"
+normal.family = "JetBrainsMono NF"
 
-size = 11
+size = 10
