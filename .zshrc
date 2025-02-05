@@ -49,7 +49,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 setopt beep
-#bindkey -v
 
 #Completion styling
 #For completion to igonore case sensitinve
@@ -57,11 +56,26 @@ zstyle ':compeletion:*' matcher-list 'm:{a-z}={A-Za-z}'
 #Enable directory preview on completions
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# Finding out what system is in use
+case "$(uname -s)" in
+  Darwin*) export SYSTEM_USED=macos
+  ;;
+  Linux*) export SYSTEM_USED=linux
+  ;;
+  Linux*Microsoft*) export SYSTEM_USED=linux
+  ;;
+esac
+
+
 # Oh My Posh
 export PATH=$PATH:/home/$(whoami)/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/my.toml)"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [[ $SYSTEM_USED == "linux" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+elif [[ $SYSTEM_USED == "macos" ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -69,7 +83,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 #Keybindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+if [ -f  /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
 
 bindkey -v
 bindkey '^f' autosuggest-accept

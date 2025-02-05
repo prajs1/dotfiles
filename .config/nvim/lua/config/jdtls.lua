@@ -8,7 +8,13 @@ local function get_jdtls()
   -- Obtain the path to the jat which runs the language server
   local launcher = vim.fn.glob(jdtls_path .. "/plugins/org.eclipse.equinox.launcher_*.jar")
   -- Declare what operating system is used, Windows use win, macOS use mac, linux use linux
-  local SYSTEM = "linux"
+  local SYSTEM_USED = os.getenv("SYSTEM_USED")
+  local SYSTEM = ""
+  if SYSTEM_USED == "linux" then
+    SYSTEM = "linux"
+  elseif SYSTEM_USED == "macos" then
+    SYSTEM = "mac"
+  end
   -- Obtain th epath to configuration files for specific operating system
   local config = jdtls_path .. "/config_" .. SYSTEM
   -- Obtain the path to the Lombok jar
