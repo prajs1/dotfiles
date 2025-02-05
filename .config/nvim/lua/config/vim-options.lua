@@ -24,7 +24,7 @@ vim.opt.undofile = true -- enable persistent undo
 vim.opt.updatetime = 100 -- set faster completion [in ms]
 vim.opt.cursorline = true -- highlight current line
 
---Window splitting
+-- Window splitting
 vim.opt.splitbelow = true -- force horizontal splits below current Window
 vim.opt.splitright = true -- forse vertical splits on the right of current window
 
@@ -33,6 +33,5 @@ vim.opt.hlsearch = true -- highlight all mathces in search
 vim.opt.ignorecase = true -- ignore casesensitive in search
 vim.opt.smartcase = true -- match casesensitive if explicitly stated
 
--- GUI Colors
-vim.opt.termguicolors = true -- Enable terminal GUI colors
-
+-- Change cursor behaviour
+vim.opt.guicursor = "n-i-v-c-sm:block,ci-ve:ver25,r-cr-o:hor20"
