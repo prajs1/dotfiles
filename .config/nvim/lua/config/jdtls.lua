@@ -211,7 +211,7 @@ local function setup_jdtls()
         -- How many classes from a specific package should be imported before automatic imports combine them all into a single import
         orginizeImports = {
           starThreshold = 5,
-          staticThreshold = 9999
+          staticThreshold = 5
         }
       },
       -- How should different pieces of code be generated
@@ -229,7 +229,17 @@ local function setup_jdtls()
       },
       -- If changes to the project will require the developer to update the projects configuration advise the developer before accepting the change
       configuration = {
-        updateBuildConfiguration = "interactive"
+        updateBuildConfiguration = "interactive",
+        runtimes = {
+          {
+            name = "JavaSE-11",
+            path = "/usr/lib/jvm/java-11-openjdk-amd64",
+          },
+          {
+            name = "JavaSE-21",
+            path = "/usr/lib/jvm/java-21-openjdk-amd64",
+          },
+        },
       },
       -- Enable code lens in te LSP
       referencesCodeLens = {

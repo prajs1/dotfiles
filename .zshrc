@@ -94,6 +94,7 @@ bindkey '^n' history-search-forward
 
 #Aliases
 source ~/.aliases
+source ~/.config/work/.work.zsh
 
 export PATH="$PATH:/home/$(whoami)/.dotnet/tools"
 export DOTNET_ROOT=/snap/dotnet-sdk/current
