@@ -17,3 +17,9 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Window splitting
 vim.keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "[W]indow split [V]ertical" })
 vim.keymap.set("n", "<leader>wh", ":split<CR>", { desc = "[W]indow split [H]orizontal" })
+
+-- Tabs
+vim.keymap.set("n", "<leader>tc", ":tabnew<CR>", { desc = "[T]ab [C]reate" })
+vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "[T]ab e[X]terminate :D os just close" })
+vim.keymap.set("n", "<leader>tn", ":tabnext +<CR>", { desc = "[T]ab [N]ext" })
+vim.keymap.set("n", "<leader>tp", ":tabnext -<CR>", { desc = "[T]ab [P]revious" })

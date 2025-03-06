@@ -68,6 +68,7 @@ return {
       vim.keymap.set("n", "<leader>cr", require("telescope.builtin").lsp_references, { desc = "[C]ode Goto [R]eferences" })
       vim.keymap.set("n", "<leader>cR", vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
       vim.keymap.set("n", "<leader>cD", vim.lsp.buf.declaration, { desc = "[C]ode Goto [D]eclaration" })
+      vim.keymap.set("n", "<leader>ce", vim.diagnostic.open_float, { desc = "[C]ode Open [E]rrors" })
     end,
   },
 }

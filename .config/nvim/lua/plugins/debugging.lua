@@ -37,5 +37,7 @@ return {
 		vim.keymap.set("n", "<leader>ds", dap.continue, { desc = "[D]ebug [S]tart" })
     -- Set a Vim motion to <Space> + d + c to close debug ui
     vim.keymap.set("n", "<leader>dc", dapui.close, { desc ="[D]ebug [C]lose" })
+    -- Set a Vim motion to <Space> + d + n to continue debugging
+    vim.keymap.set('n', "<leader>dn", function() require('dap').continue() end)
 	end,
 }
