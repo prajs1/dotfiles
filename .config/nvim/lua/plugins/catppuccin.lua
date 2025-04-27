@@ -11,7 +11,9 @@ return {
       no_underline = false,
       styles = {
         comments = { "italic" },
-        conditionala = { "italic" },
+        conditionals = { "italic" },
+        loops = { "italic" },
+        functions = { "italic" },
       },
       integrations = {
         treesitter = true,
