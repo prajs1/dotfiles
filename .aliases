@@ -29,7 +29,14 @@ alias gb="git branch -a"
 
 # MVN
 alias mvncpst="mvn clean package -DskipTests=true"
+alias mvnist="mvn install -DskipTests=true"
+
+# JAVA
+alias JAVA11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
 
 # APPS
 alias te="open -a TextEdit"
 alias vsc="open -a \"Visual Studio Code.app\""
+
+# BASE64
+alias b64d="base64 --decode <<<"
