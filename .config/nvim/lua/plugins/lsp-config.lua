@@ -1,6 +1,9 @@
 return {
   {
-    "williamboman/mason.nvim",
+    -- "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
+    -- tag = "v1.11.0",
+    -- pin = true,
     config = function()
       require("mason").setup()
     end,
