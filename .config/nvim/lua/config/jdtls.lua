@@ -1,5 +1,5 @@
 local function get_path(packcage)
-    local path = "/home/prajsro@ad.zabka.pl/.local/share/nvim/mason/packages/" .. packcage
+    local path = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/" .. packcage
 
     return path
 end
@@ -278,6 +278,10 @@ local function setup_jdtls()
 					{
 						name = "JavaSE-11",
 						path = "/usr/lib/jvm/java-11-openjdk-amd64",
+					},
+					{
+						name = "JavaSE-17",
+						path = "/usr/lib/jvm/java-17-openjdk-amd64",
 					},
 					{
 						name = "JavaSE-21",
