@@ -29,10 +29,12 @@ alias gb="git branch -a"
 
 # MVN
 alias mvncpst="mvn clean package -DskipTests=true"
-alias mvnist="mvn install -DskipTests=true"
+alias mvncist="mvn clean install -DskipTests=true"
 
 # JAVA
 alias JAVA11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
+alias JAVA17="export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
+alias JAVA21="export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64"
 
 # APPS
 alias te="open -a TextEdit"
