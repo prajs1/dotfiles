@@ -47,6 +47,14 @@ return {
         capabilities = capabilities,
       })
 
+      lspconfig.html.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.cssls.setup({
+        capabilities = capabilities,
+      })
+
       lspconfig.pylsp.setup({
         settings = {
           pylsp = {
