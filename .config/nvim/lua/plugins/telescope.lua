@@ -9,7 +9,7 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[F]ind by [G]rep" })
 			vim.keymap.set("n", "<leader>f.", builtin.oldfiles, { desc = "[F]ind recent files ('.' for repeat)" })
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind Existing [B]uffers" })
-			vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "[F]ind Existing [B]uffers" })
+			vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "[F]ind [D]iagnostics" })
 		end,
 	},
 	{
