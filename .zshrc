@@ -100,5 +100,8 @@ export PATH="$PATH:/home/$(whoami)/.dotnet/tools"
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 export SHELL=/bin/zsh
 
+# Store for GCM
+export GCM_CREDENTIAL_STORE=gpg
+
 #Shell integrations
 eval "$(fzf --zsh)"
