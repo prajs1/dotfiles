@@ -23,3 +23,9 @@ vim.keymap.set("n", "<leader>tc", ":tabnew<CR>", { desc = "[T]ab [C]reate" })
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "[T]ab e[X]terminate :D os just close" })
 vim.keymap.set("n", "<leader>tn", ":tabnext +<CR>", { desc = "[T]ab [N]ext" })
 vim.keymap.set("n", "<leader>tp", ":tabnext -<CR>", { desc = "[T]ab [P]revious" })
+
+-- Buffers 
+vim.keymap.set("n", "<leader>bb", ":buffers", { desc = "List [B]uffers" })
+vim.keymap.set("n", "<leader>bd", ":bdelete", { desc = "[B]uffer [D]elete" })
+vim.keymap.set("n", "<leader>bn", ":bNext", { desc = "[B]uffer [N]ext" })
+vim.keymap.set("n", "<leader>bp", ":bprevious", { desc = "[B]uffer [P]revious" })
