@@ -25,7 +25,15 @@ vim.keymap.set("n", "<leader>tn", ":tabnext +<CR>", { desc = "[T]ab [N]ext" })
 vim.keymap.set("n", "<leader>tp", ":tabnext -<CR>", { desc = "[T]ab [P]revious" })
 
 -- Buffers 
-vim.keymap.set("n", "<leader>bb", ":buffers", { desc = "List [B]uffers" })
-vim.keymap.set("n", "<leader>bd", ":bdelete", { desc = "[B]uffer [D]elete" })
-vim.keymap.set("n", "<leader>bn", ":bNext", { desc = "[B]uffer [N]ext" })
-vim.keymap.set("n", "<leader>bp", ":bprevious", { desc = "[B]uffer [P]revious" })
+vim.keymap.set("n", "<leader>bb", ":buffers<CR>", { desc = "List [B]uffers" })
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "[B]uffer [D]elete" })
+vim.keymap.set("n", "<leader>bn", ":bNext<CR>", { desc = "[B]uffer [N]ext" })
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "[B]uffer [P]revious" })
+
+-- Session
+vim.keymap.set("n", "<leader>ss", ":mksession<CR>", { desc = "[S]ave [S]ession" })
+vim.keymap.set("n", "<leader>sq", ":mksession<CR>:qa<CR>", { desc = "[S]ave [S]ession and [Q]uit [A]ll" })
+vim.keymap.set("n", "<leader>sq", ":mksession<CR>:wqa<CR>", { desc = "[S]ave [S]ession and [W]rite [Q]uit [A]ll" })
+vim.keymap.set("n", "<leader>sos", ":mksession!<CR>", { desc = "[S]ave [S]ession" })
+vim.keymap.set("n", "<leader>soq", ":mksession!<CR>:qa<CR>", { desc = "[S]ave [S]ession and [Q]uit [A]ll" })
+vim.keymap.set("n", "<leader>soq", ":mksession!<CR>:wqa<CR>", { desc = "[S]ave [S]ession and [W]rite [Q]uit [A]ll" })
