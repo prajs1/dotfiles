@@ -37,7 +37,7 @@ final_space = true
       "{{if eq .Code 0}}magenta{{end}}",
     ]
     background = 'transparent'
-    template = ' $'
+    template = ' ->'
 
 [[blocks]]
   type = 'rprompt'
