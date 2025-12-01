@@ -52,7 +52,7 @@ setopt beep
 
 #Completion styling
 #For completion to igonore case sensitinve
-zstyle ':compeletion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 #Enable directory preview on completions
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
