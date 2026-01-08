@@ -43,13 +43,16 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
- background-opacity = 0.8
+background-opacity = 0.9
 # background-blur = true
 
 window-decoration = none
 # window-padding-x = 5
 # window-padding-y = 5
 
-font-size = 9
+font-size = 9.5
+font-thicken = true
+
+adjust-cell-height = 15%
 
 # theme = tokyonight_night
