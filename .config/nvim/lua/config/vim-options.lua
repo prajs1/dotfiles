@@ -2,7 +2,7 @@
 vim.opt.number = true -- display line numbers
 vim.opt.relativenumber = true -- desplay relative line numbers 
 vim.opt.signcolumn  = "yes" -- always show sign column
-vim.opt.wrap = true -- ebale lines wrapping if exceeds window width
+vim.opt.wrap = true -- enable lines wrapping if exceeds window width
 vim.opt.scrolloff = 10 -- Number of columns to keep above/below cursor
 
 -- Tab spacing/behavior
@@ -24,9 +24,10 @@ vim.opt.undofile = true -- enable persistent undo
 vim.opt.updatetime = 100 -- set faster completion [in ms]
 vim.opt.cursorline = true -- highlight current line
 
--- Window splitting
+-- Windows
 vim.opt.splitbelow = true -- force horizontal splits below current Window
 vim.opt.splitright = true -- forse vertical splits on the right of current window
+vim.opt.winborder = "rounded" -- set rounded windows borders
 
 -- Searching behaviors
 vim.opt.hlsearch = true -- highlight all mathces in search
