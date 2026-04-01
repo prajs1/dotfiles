@@ -1,15 +1,23 @@
 return {
-  "rcarriga/nvim-notify",
-  config = function ()
-      local notify = require("notify")
+	{
+		"rcarriga/nvim-notify",
+		config = function()
+			local notify = require("notify")
 
-      notify.setup({
-          timeout = 1500,
-          max_width = 70,
-          background_colour = "#000000",
-          render = "wrapped-compact",
-      })
+			notify.setup({
+				timeout = 1500,
+				max_width = 70,
+				background_colour = "#000000",
+				render = "wrapped-compact",
+			})
 
-      vim.notify = notify
-  end
+			vim.notify = notify
+		end,
+	},
+	{
+		"j-hui/fidget.nvim",
+		opts = {
+			-- options
+		},
+	},
 }

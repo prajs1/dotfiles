@@ -17,65 +17,65 @@ return {
     --         vim.cmd.colorscheme("tokyonight-night")
     --     end,
     -- }
-    -- {
-    -- 	"catppuccin/nvim",
-    -- 	name = "catppucin",
-    -- 	priority = 1000,
-    -- 	config = function()
-    -- 		require("catppuccin").setup({
-    -- 			flavour = "mocha",
-    -- 			transparent_background = true,
-    -- 			no_italic = false,
-    -- 			no_bold = false,
-    -- 			no_underline = false,
-    -- 			styles = {
-    -- 				comments = { "italic" },
-    -- 				conditionals = { "italic" },
-    -- 				loops = { "italic" },
-    -- 				functions = { "italic" },
-    -- 			},
-    -- 			integrations = {
-    -- 				treesitter = true,
-    -- 				notify = true,
-    -- 			},
-    -- 		})
-    --
-    -- 		vim.cmd.colorscheme("catppuccin")
-    -- 	end,
-    -- }
     {
-    	"olimorris/onedarkpro.nvim",
+    	"catppuccin/nvim",
+    	name = "catppucin",
     	priority = 1000,
     	config = function()
-    		require("onedarkpro").setup({
-    			highlights = {
-    				Comment = { italic = true },
-    				Directory = { bold = true },
-    				ErrorMsg = { italic = true, bold = true },
-    			},
+    		require("catppuccin").setup({
+    			flavour = "mocha",
+    			transparent_background = true,
+    			no_italic = false,
+    			no_bold = false,
+    			no_underline = false,
     			styles = {
-    				types = "NONE",
-    				methods = "italic",
-    				numbers = "NONE",
-    				strings = "NONE",
-    				comments = "italic",
-    				keywords = "bold,italic",
-    				constants = "bold,italic",
-    				functions = "italic",
-    				operators = "NONE",
-    				variables = "NONE",
-    				parameters = "NONE",
-    				conditionals = "italic",
-    				virtual_text = "NONE",
+    				comments = { "italic" },
+    				conditionals = { "italic" },
+    				loops = { "italic" },
+    				functions = { "italic" },
     			},
-    			plugins = { all = true },
-    			options = {
-    				transparency = true,
+    			integrations = {
+    				treesitter = true,
+    				notify = true,
     			},
     		})
-    		vim.cmd.colorscheme("onedark")
+
+    		vim.cmd.colorscheme("catppuccin")
     	end,
-    },
+    }
+    -- {
+    -- 	"olimorris/onedarkpro.nvim",
+    -- 	priority = 1000,
+    -- 	config = function()
+    -- 		require("onedarkpro").setup({
+    -- 			highlights = {
+    -- 				Comment = { italic = true },
+    -- 				Directory = { bold = true },
+    -- 				ErrorMsg = { italic = true, bold = true },
+    -- 			},
+    -- 			styles = {
+    -- 				types = "NONE",
+    -- 				methods = "italic",
+    -- 				numbers = "NONE",
+    -- 				strings = "NONE",
+    -- 				comments = "italic",
+    -- 				keywords = "bold,italic",
+    -- 				constants = "bold,italic",
+    -- 				functions = "italic",
+    -- 				operators = "NONE",
+    -- 				variables = "NONE",
+    -- 				parameters = "NONE",
+    -- 				conditionals = "italic",
+    -- 				virtual_text = "NONE",
+    -- 			},
+    -- 			plugins = { all = true },
+    -- 			options = {
+    -- 				transparency = true,
+    -- 			},
+    -- 		})
+    -- 		vim.cmd.colorscheme("onedark")
+    -- 	end,
+    -- },
     -- {
     --     "rose-pine/neovim",
     --     name = "rose-pine",

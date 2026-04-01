@@ -27,7 +27,7 @@ vim.opt.cursorline = true -- highlight current line
 -- Windows
 vim.opt.splitbelow = true -- force horizontal splits below current Window
 vim.opt.splitright = true -- forse vertical splits on the right of current window
-vim.opt.winborder = "rounded" -- set rounded windows borders
+-- vim.opt.winborder = "rounded" -- set rounded windows borders
 
 -- Searching behaviors
 vim.opt.hlsearch = true -- highlight all mathces in search
