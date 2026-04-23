@@ -13,7 +13,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         -- Install these LSP's automatically
-        ensure_installed = { "lua_ls", "ts_ls", "eslint", "angularls", "jdtls" },
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "angularls", "jdtls", "html", "cssls" },
       })
     end,
   },
