@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "[T]ab e[X]terminate
 vim.keymap.set("n", "<leader>tn", ":tabnext +<CR>", { desc = "[T]ab [N]ext" })
 vim.keymap.set("n", "<leader>tp", ":tabnext -<CR>", { desc = "[T]ab [P]revious" })
 
--- Buffers 
+-- Buffers
 vim.keymap.set("n", "<leader>bb", ":buffers<CR>", { desc = "List [B]uffers" })
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "[B]uffer [D]elete" })
 vim.keymap.set("n", "<leader>bn", ":bNext<CR>", { desc = "[B]uffer [N]ext" })
@@ -37,3 +37,9 @@ vim.keymap.set("n", "<leader>sq", ":mksession<CR>:wqa<CR>", { desc = "[S]ave [S]
 vim.keymap.set("n", "<leader>sos", ":mksession!<CR>", { desc = "[S]ave [S]ession" })
 vim.keymap.set("n", "<leader>soq", ":mksession!<CR>:qa<CR>", { desc = "[S]ave [S]ession and [Q]uit [A]ll" })
 vim.keymap.set("n", "<leader>soq", ":mksession!<CR>:wqa<CR>", { desc = "[S]ave [S]ession and [W]rite [Q]uit [A]ll" })
+
+-- Themes
+vim.keymap.set("n", "<leader>tt", require("config.transparency").toggle, {
+    desc = "[T]oggle [T]ransparency",
+})
+vim.keymap.set("n","<leader>tT", ":Themery<CR>", { desc = "[T]oggle [T]hemery"})
