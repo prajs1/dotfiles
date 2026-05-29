@@ -15,6 +15,7 @@ blur = true
 option_as_alt = "Both"
 
 [font]
-normal.family = "JetBrainsMono Nerd Font Mono"
+normal.family = "JetBrainsMono Nerd Font"
+offset = { x = 0, y = 1 }
 
 size = 8
