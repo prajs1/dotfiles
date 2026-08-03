@@ -5,7 +5,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # LIST
-alias l="ls -alth --color | bat"
+alias l="ls -alth --color"
 alias l10="ls -alth --color | head -10"
 alias l20="ls -alth --color | head -20"
 
