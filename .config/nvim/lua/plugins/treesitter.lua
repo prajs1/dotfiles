@@ -23,6 +23,7 @@ return {
 					"bash",
 					"diff",
 					"xml",
+                    "dockerfile",
 				},
 				auto_install = true,
 				highlight = { enable = true },
